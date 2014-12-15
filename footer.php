@@ -19,7 +19,7 @@
 
         <div class="col col_wide">
              
-<img src="/wp-content/themes/isatools-tt/img/footer_logo.svg" alt="Logo" style="width: 40%"/>
+<img src="/wp-content/themes/isatools-wp-theme/img/footer_logo.svg" alt="Logo" style="width: 40%"/>
         </div>
 
         <div class="col col_med">
@@ -33,7 +33,7 @@
         <div class="col col_med">
             <h3>Resources</h3>
             <ul>
-                <li><a href="http://www.github.com/ovii" target="_blank">Code</a></li>
+                <li><a href="http://www.github.com/ISA-tools" target="_blank">Code</a></li>
                 <li><a href="mailto:isatools@googlegroups.com">Contact us</a></li>
             </ul>
         </div>
