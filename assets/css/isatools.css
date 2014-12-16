@@ -491,7 +491,7 @@ Project page css
 
 .blog-post {
     width: 30%;
-    height: 200px;
+    height: 340px;
     float: left;
     opacity: .9;
     margin-right: 20px;
@@ -509,7 +509,7 @@ Project page css
 
 .picture_and_title {
 
-    height: 100px;
+    height: 200px;
 }
 
 .blog-post-item-content {
