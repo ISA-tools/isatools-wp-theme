@@ -13,6 +13,7 @@
 	</div><!-- #main -->
 <div class="clearfix"></div>
 
+
 <div id="footer" class="centralPanel">
 
     <div id="footer_nav_wrapper">
@@ -27,6 +28,7 @@
             <ul>
                 <li><a href="http://www.oerc.ox.ac.uk" target="_blank">Oxford e-Research Centre</a></li>
                 <li><a href="http://www.ox.ac.uk" target="_blank">University of Oxford</a></li>
+                <li><a href="http://www.biosharing.org" target="_blank">BioSharing</a></li>
             </ul>
         </div>
 
