@@ -37,7 +37,7 @@ get_header(); ?>
 <br/>
 <?php
 $args = array(
-	'showposts' => '4',
+	'showposts' => '3',
 );
 ?>
 <?php $the_query = new WP_Query( $args ); ?>
