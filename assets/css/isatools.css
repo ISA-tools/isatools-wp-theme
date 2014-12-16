@@ -309,8 +309,8 @@ Project page css
     
     color: #414241;
     float: left;
-    width: 200px;
-    height: 240px;
+    width: 219px;
+    height: 250px;
     margin: 10px 10px 30px;
 
 }
@@ -318,13 +318,13 @@ Project page css
 .person-image {
     height: 190px;
     width: 190px;
-    border-radius: 50%;
+    border-radius: 3px;
 }
 
 .isatools-person .meta {
     height: 50px;
     position: relative;
-    top: 150px;
+    top: 192px;
     background-color: white;
     opacity: .9;
     font-size: .9em;
@@ -2118,7 +2118,7 @@ div.css-search div.em-search-main .em-search-submit:hover {
     }
 
     .isatools-person {
-        width: 90%;
+        width: 100%;
     }
 
     .breadcrumb {
@@ -2172,9 +2172,10 @@ div.css-search div.em-search-main .em-search-submit:hover {
         width: 100%;
     }
 
-    .person-image {
-        height: 300px;
+    .isatools-person {
+        width: 100%;
     }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -2227,7 +2228,17 @@ div.css-search div.em-search-main .em-search-submit:hover {
     }
 
     .isatools-person {
-        width: 90%;
+        width: 100%;
+        height: 340px;
+    }
+
+    .person-image {
+        width: 100%;
+        height: 270px;
+    }
+
+    .isatools-person .meta {
+        top: 270px;
     }
 
     .breadcrumb {
