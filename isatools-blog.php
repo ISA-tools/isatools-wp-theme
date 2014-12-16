@@ -36,7 +36,6 @@ if(count($values) > 0) {
         <div class="title"><?php the_title(); ?></div>
 
     </div>
-</a>
 </div>
 </a>
 <div class="clearfix"></div>
