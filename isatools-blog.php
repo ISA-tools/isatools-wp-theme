@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-<div class="site-content" style="width:100%">
+<div class="site-content" style="width:100%;margin-top: 20px">
 <br/>
 <h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center">ISA Tools Blog</h2>
 <br/>
