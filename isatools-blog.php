@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: OUPF Blog Page
+ * Template Name: ISA Tools Blog Page List
  *
  * Selectable from a dropdown menu on the edit page screen.
  */
