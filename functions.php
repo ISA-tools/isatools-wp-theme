@@ -534,6 +534,7 @@ $tools = new JW_Post_Type('Tools', array(
 
 $tools->add_meta_box('Tool Info', array(
 	'description' => 'textarea',
+	'version' => 'text',
 	'mac_download' => 'text',
 	'windows_download' => 'text',
 	'linux_download' => 'text',

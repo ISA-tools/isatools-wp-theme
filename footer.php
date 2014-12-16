@@ -35,6 +35,8 @@
             <ul>
                 <li><a href="http://www.github.com/ISA-tools" target="_blank">Code</a></li>
                 <li><a href="mailto:isatools@googlegroups.com">Contact us</a></li>
+                <li><?php wp_loginout(); ?></li>
+                <li><?php wp_register('',''); ?></li>
             </ul>
         </div>
 
