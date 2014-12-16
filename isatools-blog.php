@@ -15,7 +15,7 @@ get_header(); ?>
 $args = array(
 	'showposts' => '-1',
 );
- $the_query = new WP_Query( $args ); ?>
+$the_query = new WP_Query( $args ); ?>
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
 <div class="blog-post">
@@ -36,13 +36,11 @@ if(count($values) > 0) {
         <div class="title"><?php the_title(); ?></div>
 
     </div>
-</div>
 </a>
-<div class="clearfix"></div>
 </div>
-
 
 <?php endwhile;?>
+
 
 </div>
 
