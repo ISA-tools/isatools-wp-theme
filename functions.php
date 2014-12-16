@@ -497,3 +497,118 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130301', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+require 'jw_custom_posts.php';
+
+$person = new JW_Post_Type('Person', array(
+   'supports' => array('title', 'revisions'),
+   'labels' => array(
+               'name'      => 'Person',
+               'all_items' => 'People',
+           ),
+   'can_export' => true,
+));
+$person->add_taxonomy('Interests');
+$person->add_meta_box('Person Info', array(
+	'position' => 'text',
+	'institution' => 'text',
+	'biography' => 'textarea',
+	'Profile Image' => 'file',
+	'email' => 'text',
+	'website' => 'text',
+	'linkedin' => 'text',
+	'twitter' => 'text',
+	'github' => 'text',
+	'orcid' => 'text',
+	'google plus' => 'text'
+));
+
+$tools = new JW_Post_Type('Tools', array(
+   'supports' => array('title', 'revisions'),
+   'labels' => array(
+               'name'      => 'Tool',
+               'all_items' => 'Tools',
+           ),
+    'can_export' => true,
+));
+
+$tools->add_meta_box('Tool Info', array(
+	'description' => 'textarea',
+	'mac_download' => 'text',
+	'windows_download' => 'text',
+	'linux_download' => 'text',
+	'source' => 'text',
+	'source_code' => 'text',
+	'help' => 'text',
+	'issues' => 'text',
+	'videos' => 'text',
+	'type' => 'text',
+	'logo' => 'file',
+	'screenshot' => 'file'
+));
+
+function change_default_title( $title ){
+
+    $screen = get_current_screen();
+
+    if ( 'person' == $screen->post_type){
+        $title = 'Enter title and name of person';
+    }
+
+    if('project' == $screen->post_type) {
+        $title = 'Enter project title';
+    }
+
+    return $title;
+}
+
+add_filter( 'enter_title_here', 'change_default_title' );
+
+function people_function($atts) {
+
+	$the_query = new WP_Query(array('post_type' => 'Person', 'posts_per_page' => -1, 'orderby' => 'id', 'order' =>'ASC'));
+	$str = "";
+	if ( $the_query->have_posts() ) {
+		$str ='<div id="people">';
+    	while ( $the_query->have_posts() ) {
+    		$the_query->the_post();
+
+    		$str .='<div id="'.get_the_ID().'" class="isatools-person">';
+
+    			$str .='<div class="person-image" style="background: url('.get_post_meta( get_the_ID(),'person_info_profile_image', true ).') no-repeat; background-size:100%" >';
+    			$str .='<div class="meta">';
+
+				$str .='<div class="name"><a href="'.get_the_permalink().'">'.get_the_title().'</a></div>';
+				$str .='<div class="position">'.get_post_meta( get_the_ID(), 'person_info_position', true ).'</div>';
+
+				$str .='<div class="links">';
+
+					if (get_post_meta( get_the_ID(),'person_info_website', true ) != "") {
+						$str .=' <a target="_blank" href="'.get_post_meta( get_the_ID(), 'person_info_website', true ).'"><i class="fa fa-home" style="font-size:1.5em"></i></a>';
+					}
+
+					if (get_post_meta( get_the_ID(), 'person_info_github', true ) != "") {
+						$str .=' <a target="_blank" href="'.get_post_meta( get_the_ID(), 'person_info_github', true ).'"><i class="fa fa-github-alt" style="font-size:1.5em"></i></a>';
+					}
+
+					if (get_post_meta( get_the_ID(), 'person_info_linkedin', true ) != "") {
+                    	$str .=' <a target="_blank" href="'.get_post_meta( get_the_ID(), 'person_info_linkedin', true ).'"><i class="fa fa-linkedin-square" style="font-size:1.5em"></i></a>';
+                    }
+
+                    if (get_post_meta( get_the_ID(), 'person_info_google_plus', true ) != "") {
+                    	$str .=' <a target="_blank" href="'.get_post_meta( get_the_ID(), 'person_info_google_plus', true ).'"><i class="fa fa-google-plus-square" style="font-size:1.5em"></i></a>';
+                    }
+					$str .='</div>';
+    			$str .='</div></div>';
+
+    		$str .='</div>';
+    	}
+    	$str .='</div>';
+    }
+
+    return $str;
+
+
+}
+
+add_shortcode('people', 'people_function');
