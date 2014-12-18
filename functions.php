@@ -604,7 +604,6 @@ function people_function($atts) {
     		$str .='</div>';
     	}
     	$str .='</div>';
-    	$str .='</div>';
     }
     return $str;
 }
