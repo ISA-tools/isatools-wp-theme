@@ -2239,6 +2239,10 @@ div.css-search div.em-search-main .em-search-submit:hover {
         clear: both;
     }
 
+    .tool_block {
+        width: 100%;
+    }
+
     .isatools-person {
         width: 90%;
     }
@@ -2308,6 +2312,10 @@ div.css-search div.em-search-main .em-search-submit:hover {
     }
 
     .support_item {
+        width: 100%;
+    }
+
+    .tool_block {
         width: 100%;
     }
 
