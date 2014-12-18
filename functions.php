@@ -538,7 +538,7 @@ $tools->add_meta_box('Tool Info', array(
 	'apple_download' => 'text',
 	'windows_download' => 'text',
 	'linux_download' => 'text',
-	'tool type' => array('select', array('Analysis', 'Configuration', 'Conversion', 'Annotation', 'Ontology', 'Parsers', 'Web')),
+	'tool type' => array('select', array('Analysis','Annotation', 'Configuration', 'Conversion', 'Ontology', 'Parsers', 'Validation', 'Web')),
 	'source' => 'text',
 	'docs' => 'text',
 	'issues' => 'text',
@@ -610,7 +610,7 @@ function people_function($atts) {
 }
 
 function output_filter() {
-	$tool_types = array('Analysis', 'Configuration', 'Conversion', 'Annotation', 'Ontology', 'Parsers', 'Web');
+	$tool_types = array('Analysis', 'Annotation', 'Configuration', 'Conversion', 'Ontology', 'Parsers', 'Validation', 'Web');
 	$filter_str = '<ul id="filter-items" class="splitter"><li><ul>';
 	$filter_str .= '<li class="selected"><span data-value="all">All</span></li>';
 	foreach ($tool_types as $key => $val) {
