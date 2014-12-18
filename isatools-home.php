@@ -117,6 +117,9 @@ get_header(); ?>
 
 <div class="latest-oupf-posts">
 
+<h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest News</h2>
+<br/>
+
  <div class="tweet-container" >
     <div id="twitter_icon" class="pull-left" style="padding-top: 15px; font-size: 1.5em">
         <i class="fa fa-twitter"></i>
@@ -132,9 +135,8 @@ get_header(); ?>
 <div class="cf"></div>
 </div>
 
+<div class="cf"></div><br/><br/>
 
-<h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest News</h2>
-<br/>
 <?php
 $args = array(
 	'showposts' => '3',
