@@ -538,7 +538,7 @@ $tools->add_meta_box('Tool Info', array(
 	'apple_download' => 'text',
 	'windows_download' => 'text',
 	'linux_download' => 'text',
-	'tool type' => array('select', array('Analysis', 'Configuration', 'Conversion', 'Data Annotation', 'Ontology', 'Parsers', 'Web')),
+	'tool type' => array('select', array('Analysis', 'Configuration', 'Conversion', 'Annotation', 'Ontology', 'Parsers', 'Web')),
 	'source' => 'text',
 	'docs' => 'text',
 	'issues' => 'text',
