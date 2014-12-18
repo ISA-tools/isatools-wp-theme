@@ -12,6 +12,10 @@ get_header(); ?>
 <h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center">ISA-Tab Examples</h2>
 <br/>
 
+<p>Several examples of <strong>ISA-Tab</strong> formatted metadata files are available in the table below.
+If you need help or want more examples, <a href="mailto:isatools@googlegroups.com?subject=Format query" target="_blank"><strong>contact the ISA team</strong></a>. These
+files are shown using the <a href="https://github.com/ISA-tools/ISATab-Viewer" target="_blank">ISA-Tab viewer</a> which you can use on your site too!</p>
+
 <div id="investigation_file" class="isa-view">
     <div class="toolbar">
         Select ISA-Tab file to view
