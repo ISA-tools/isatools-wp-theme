@@ -172,6 +172,33 @@
     background-color: #414241;
 }
 
+.training_item {
+    background-color: #f1f2f1;
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    color: #414241;
+}
+
+.training_item h4 {
+    font-size: 1.3em;
+}
+
+.training_item .date{
+    color: #888;
+    font-size: 1.2em;
+}
+
+.training_item .authors{
+    font-size: 1.1em;
+}
+
+.training_item .description{
+    font-size: 1em;
+}
+
+
 .site-content article {
     border-bottom: none;
 }
