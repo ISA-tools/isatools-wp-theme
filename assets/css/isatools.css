@@ -232,7 +232,24 @@
 }
 
 .site-content {
-    
+
+}
+
+.support_item {
+    float: left;
+    width: 27%;
+    margin-right: 1%;
+    height: 270px;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    border-right: 1px solid #f1f2f1;
+
+
+}
+
+.support_item p {
+    font-size: .55em;
 }
 
 /* Twitter feed */
@@ -2287,7 +2304,10 @@ div.css-search div.em-search-main .em-search-submit:hover {
 
     .features {
         width: 100%;
+    }
 
+    .support_item {
+        width: 100%;
     }
 
     #footer .col_med {
@@ -2382,6 +2402,11 @@ div.css-search div.em-search-main .em-search-submit:hover {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 580px) {
+
+    .support_item {
+        width: 100%;
+    }
+
     #footer .col_med {
         width: 100%;
         padding-top: 20px;
@@ -2459,6 +2484,7 @@ div.css-search div.em-search-main .em-search-submit:hover {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 921px) {
+
     #footer .col_med {
         width: 100%;
         padding-top: 20px;
