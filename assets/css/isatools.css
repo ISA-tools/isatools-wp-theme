@@ -634,6 +634,56 @@ Project page css
 
 }
 
+.features {
+    width: 30%;
+    background-clip: padding-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    background: #fff;
+    height: 140px;
+    padding: 0;
+    margin: 0 0 -0.84465% 3.14465%;
+    overflow: hidden;
+    position: relative;
+}
+
+.features img {
+    float: left;
+    margin-right: 15px;
+    width: 80%;
+}
+
+.features h2 {
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 5px 0;
+
+    float: left;
+}
+
+.features p {
+    color: #82858a;
+    line-height: 1.2;
+    margin: 0;
+
+    float: left;
+}
+
+.image-container {
+    float: left;
+    width: 20%;
+}
+
+.feature-content {
+    float: left;
+    width: 75%
+}
+
+
 /* Blog post */
 
 .blog-post {
