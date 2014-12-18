@@ -111,19 +111,6 @@ get_header(); ?>
     </div>
 
 
-    <div class="features grid_5">
-
-        <div class="image-container">
-            <img src="/wp-content/themes/isatools-wp-theme/img/features/publish.png"/>
-        </div>
-
-        <div class="feature-content">
-            <h2>deposit to scidata</h2>
-
-            <p>directly export your experiments to the Scientific Data</p>
-        </div>
-    </div>
-
 </div>
 
 <div class="cf"></div>

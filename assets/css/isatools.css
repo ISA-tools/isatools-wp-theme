@@ -2284,6 +2284,12 @@ div.css-search div.em-search-main .em-search-submit:hover {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+
+    .features {
+        width: 100%;
+
+    }
+
     #footer .col_med {
         width: 100%;
         padding-top: 20px;
@@ -2532,14 +2538,6 @@ div.css-search div.em-search-main .em-search-submit:hover {
 .wp_rss_retriever p {
     margin: 0;
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    /* IE10+ specific styles go here */
-    .isatools-search-box {
-        margin-bottom: -2px;
-    }
-}
-
 
 
 
