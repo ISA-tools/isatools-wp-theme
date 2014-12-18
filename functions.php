@@ -634,7 +634,7 @@ function tools_function($attrs) {
         while ( $the_query->have_posts() ) {
         	$the_query->the_post();
 
-        	$str .='<li id="'.get_the_ID().'" class="tool_block '.get_post_meta( get_the_ID(), 'tool_info_tool_type', true ).'" style="margin-left:0px">';
+        	$str .='<li id="'.get_the_ID().'" class="tool_block '.get_post_meta( get_the_ID(), 'tool_info_tool_type', true ).'" style="margin-left:0px; margin-right: 4px; margin-bottom: 4px">';
         	$str .= '<div align="center" id="'.get_the_title().'" class="services">';
         	$str .= '<img src="'.get_post_meta( get_the_ID(),'tool_info_logo', true ).'" alt="'.get_the_title().'" style="float:none"><div class="cf"></div>';
         	$str .= '<div class="descriptionBlock">'.get_post_meta( get_the_ID(),'tool_info_description', true ).'</div>';
