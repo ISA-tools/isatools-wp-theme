@@ -706,10 +706,11 @@ Project page css
 
 .blog-post {
     width: 30%;
-    height: 340px;
+    height: 300px;
     float: left;
     opacity: .9;
-    margin-right: 20px;
+    margin-right: 0;
+    padding: 20px;
     transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
