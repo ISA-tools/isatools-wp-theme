@@ -30,17 +30,15 @@ get_header(); ?>
 
 
 <div class="cf"></div><br/>
-            <div class="col-md-3">
+            <div style="width: 80%; margin: 0 auto" align="center">
             <div class="person-detail-image" style="background:url(<?php echo get_post_meta( get_the_ID(), 'person_info_profile_image', true );?>) no-repeat; background-size: 100%;">
             </div>
 
 
+            <div class="cf"></div>
 
-            </div>
-
-            <div class="col-md-8 isatools-detail">
-
-                            <div class="name"><?php echo get_post_meta( get_the_ID(), 'person_info_title', true );?> <?php echo the_title();?></div>
+<br/>
+                            <div class="name" style="font-weight:bolder; font-size: 1.3em"><?php echo get_post_meta( get_the_ID(), 'person_info_title', true );?> <?php echo the_title();?></div>
 
 
 
@@ -114,4 +112,16 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
+
+<style>
+    .person-detail-image {
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+    }
+
+    .contact-details a {
+        color: #414241;
+    }
+</style>
 <?php get_footer(); ?>
