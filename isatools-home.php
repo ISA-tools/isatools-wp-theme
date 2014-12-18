@@ -10,7 +10,20 @@ get_header(); ?>
 	<div class="site-content" style="width:100%">
 		<div id="content" role="main">
 
+ <div class="tweet-container" >
+    <div id="twitter_icon" class="pull-left" style="padding-top: 15px; font-size: 1.5em">
+        <i class="fa fa-twitter"></i>
+    </div>
 
+    <div class="tweet pull-left" id="twitter"><div class="spinner">
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3"></div>
+    <div class="rect4"></div>
+    <div class="rect5"></div>
+    </div></div>
+<div class="cf"></div>
+</div>
 <div>
 <br/>
 <p style="font-weight: normal; color: #666; font-size:1.2em; line-height: 26px; text-rendering: optimizelegibility;">
@@ -117,25 +130,9 @@ get_header(); ?>
 
 <div class="latest-oupf-posts">
 
-<h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest News</h2>
+<h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest Posts</h2>
 <br/>
 
- <div class="tweet-container" >
-    <div id="twitter_icon" class="pull-left" style="padding-top: 15px; font-size: 1.5em">
-        <i class="fa fa-twitter"></i>
-    </div>
-
-    <div class="tweet pull-left" id="twitter"><div class="spinner">
-    <div class="rect1"></div>
-    <div class="rect2"></div>
-    <div class="rect3"></div>
-    <div class="rect4"></div>
-    <div class="rect5"></div>
-    </div></div>
-<div class="cf"></div>
-</div>
-
-<div class="cf"></div><br/><br/>
 
 <?php
 $args = array(
@@ -172,12 +169,34 @@ if(count($values) > 0) {
 
 <div class="cf"></div>
 
+<h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest Publications</h2>
+<br/>
 
-</div>
-<div class="cf"></div>
+            <?php
+                echo do_shortcode( '[wp-publication-archive limit=3/]' );
+            ?>
+
+            <style>
+                .single-publication{
+                    background-color: white;
+                    font-size: .9em;
+                }
+
+                .publication_authors {
+                    font-weight: bolder;
+                }
+
+                .publication_title {
+                    height: 65px;
+                }
+
+                .publication_thumbnail {
+                    display: none;
+                }
+            </style>
 
 
-
+            <div class="cf"></div><br/>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
