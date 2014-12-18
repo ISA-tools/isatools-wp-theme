@@ -85,7 +85,7 @@
     height: 300px;
     overflow: hidden;
     margin-bottom: 8px;
-
+    float: left;
     background-color: #f6f6f6;
 
     padding: 4px;
