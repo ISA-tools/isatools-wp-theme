@@ -535,15 +535,14 @@ $tools = new JW_Post_Type('Tools', array(
 $tools->add_meta_box('Tool Info', array(
 	'description' => 'textarea',
 	'version' => 'text',
-	'mac_download' => 'text',
+	'apple_download' => 'text',
 	'windows_download' => 'text',
 	'linux_download' => 'text',
+	'tool type' => array('select', array('Analysis', 'Configuration', 'Conversion', 'Data Annotation', 'Ontology', 'Parsers', 'Web')),
 	'source' => 'text',
-	'source_code' => 'text',
-	'help' => 'text',
+	'docs' => 'text',
 	'issues' => 'text',
 	'videos' => 'text',
-	'type' => 'text',
 	'logo' => 'file',
 	'screenshot' => 'file'
 ));
@@ -607,10 +606,68 @@ function people_function($atts) {
     	$str .='</div>';
     	$str .='</div>';
     }
+    return $str;
+}
+
+function output_filter() {
+	$tool_types = array('Analysis', 'Configuration', 'Conversion', 'Annotation', 'Ontology', 'Parsers', 'Web');
+	$filter_str = '<ul id="filter-items" class="splitter"><li><ul>';
+	$filter_str .= '<li class="selected"><a href="#filter-items" data-value="all">All</a></li>';
+	foreach ($tool_types as $key => $val) {
+		$filter_str .= '<li class=""><a href="#filter-items" data-value="'.$val.'">'.$val.'</a></li>';
+	}
+	$filter_str .= '</ul></li></ul>';
+
+	return $filter_str;
+}
+
+function tools_function($attrs) {
+	$the_query = new WP_Query(array('post_type' => 'Tools', 'posts_per_page' => -1, 'orderby' => 'id', 'order' =>'ASC'));
+    $str = "";
+	$supported_os = array('windows', 'apple', 'linux');
+	$support_link = array('docs' => 'fa-book', 'videos' => 'fa-video-camera', 'source' => 'fa-github', 'issues' => 'fa-warning');
+
+    if ( $the_query->have_posts() ) {
+    	$str .= output_filter();
+    	$str .= '<div class="cf"></div>';
+    	$str .='<ul id="tool-list" class="service-list">';
+        while ( $the_query->have_posts() ) {
+        	$the_query->the_post();
+
+        	$str .='<li id="'.get_the_ID().'" class="tool_block '.get_post_meta( get_the_ID(), 'tool_info_tool_type', true ).'">';
+        	$str .= '<div align="center" id="'.get_the_title().'" class="services">';
+        	$str .= '<img src="'.get_post_meta( get_the_ID(),'tool_info_logo', true ).'" alt="'.get_the_title().'" style="float:none"><div class="cf"></div>';
+        	$str .= '<div class="descriptionBlock">'.get_post_meta( get_the_ID(),'tool_info_description', true ).'</div>';
+        	$str .= '<div><i class="fa fa-tag"></i> Version '.get_post_meta( get_the_ID(),'tool_info_version', true ).'</div><div class="cf"></div>';
+
+        	$str .= '<div class="download">';
+        	foreach ($supported_os as $key => $val) {
+				$meta_key = 'tool_info_'.$val.'_download';
+				$meta_value = get_post_meta( get_the_ID(),$meta_key, true );
+                if($meta_value != '') {
+                	$str .= '<a href="'.$meta_value.'" class="download-button" target="_blank"><span class="fa fa-'.$val.'"></span></a>';
+                }
+            }
+            $str .= '</div>';
+			$str .= '<div class="clearfix"></div>';
+            $str .= '<div class="support_links">';
+            foreach ($support_link as $key => $val) {
+            	$meta_key = 'tool_info_'.$key;
+            	$meta_value = get_post_meta( get_the_ID(), $meta_key, true );
+            	if($meta_value != '') {
+                	$str .= '<a href="'.$meta_value.'" class="download-button button-small" target="_blank"><span class="fa '.$val.'"></span> '. $key.'</a>';
+                }
+            }
+
+			$str .= '</div></li>';
+
+        }
+    } else {
+    	$str .= '<h4>No tools available</h4>';
+    }
 
     return $str;
-
-
 }
 
 add_shortcode('people', 'people_function');
+add_shortcode('tools', 'tools_function');
