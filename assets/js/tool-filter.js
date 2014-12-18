@@ -22,15 +22,14 @@ $(function () {
         useScaling: 'false'
     };
 
-    var $list = $('#tool-list');
-    var $data = $list.clone();
+    var $list = $('#tool-list li');
 
     var $controls = $('ul.splitter ul');
 
     $controls.each(function () {
 
         var $control = jQuery(this);
-        var $buttons = $control.find('a');
+        var $buttons = $control.find('span');
 
         $buttons.bind('click', function () {
 
@@ -51,14 +50,21 @@ $(function () {
                 $button_container.addClass('selected');
                 selectedButton = $button_container;
 
-                var sorting_kind = $button_container.find('a').attr('data-value');
+                var sorting_kind = $button_container.find('span').attr('data-value');
 
-                if (sorting_kind == 'all') {
-                    var $filtered_data = $data.find('li');
-                } else {
-                    var $filtered_data = $data.find('li.' + sorting_kind);
-                }
-                $list.quicksand($filtered_data, $preferences);
+                $($list).each(function () {
+
+                    if (sorting_kind == 'all') {
+                        $(this).fadeIn();
+                    } else {
+                        if($(this).hasClass(sorting_kind)) {
+                            $(this).fadeIn();
+                        } else {
+                            $(this).fadeOut();
+                        }
+                    }
+
+                });
             }
         });
 

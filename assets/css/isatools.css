@@ -16,12 +16,11 @@
 
 
 .splitter {
-
     text-align: left;
     background: #fff;
     width: 100%;
     padding: 6px 5px 5px;
-    font-size: 9px;
+    font-size: .9em;
     font-weight: lighter;
 }
 
@@ -35,8 +34,8 @@
 
 .splitter li,
 .splitter ul,
-.splitter ul li a {
-    display: inline;
+.splitter ul li span {
+    margin: 0;
     display: inline-block;
 
 }
@@ -45,6 +44,7 @@
     background: #FAFAFA;
     border: 1px solid #EAEAEA;
     border-bottom-color: #ccc;
+    cursor: pointer;
 }
 
 .splitter ul li:hover {
@@ -55,15 +55,15 @@
     background-image: -o-linear-gradient(top, #fff, #f1f2f2);
 }
 
-.splitter ul li a {
+.splitter ul li span {
     padding: 5px 8px 6px;
     color: #666;
     text-decoration: none;
 }
 
-.splitter ul li.selected a {
+.splitter ul li.selected span {
     color: #fff;
-    background-color: #666;
+    background-color: #414241;
 }
 
 

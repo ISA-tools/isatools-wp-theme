@@ -612,9 +612,9 @@ function people_function($atts) {
 function output_filter() {
 	$tool_types = array('Analysis', 'Configuration', 'Conversion', 'Annotation', 'Ontology', 'Parsers', 'Web');
 	$filter_str = '<ul id="filter-items" class="splitter"><li><ul>';
-	$filter_str .= '<li class="selected"><a href="#filter-items" data-value="all">All</a></li>';
+	$filter_str .= '<li class="selected"><span data-value="all">All</span></li>';
 	foreach ($tool_types as $key => $val) {
-		$filter_str .= '<li class=""><a href="#filter-items" data-value="'.$val.'">'.$val.'</a></li>';
+		$filter_str .= '<li class=""><span data-value="'.$val.'">'.$val.'</span></li>';
 	}
 	$filter_str .= '</ul></li></ul>';
 
