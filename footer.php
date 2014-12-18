@@ -9,7 +9,7 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
+</div>
 	</div><!-- #main -->
 <div class="clearfix"></div>
 

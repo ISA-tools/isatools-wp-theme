@@ -14,6 +14,127 @@
 }
 
 
+
+.splitter {
+
+    text-align: left;
+    background: #fff;
+    width: 100%;
+    padding: 6px 5px 5px;
+    font-size: 9px;
+    font-weight: lighter;
+}
+
+.splitter:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+.splitter li,
+.splitter ul,
+.splitter ul li a {
+    display: inline;
+    display: inline-block;
+
+}
+
+.splitter ul li {
+    background: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    border-bottom-color: #ccc;
+}
+
+.splitter ul li:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f1f2f2));
+    background-image: -webkit-linear-gradient(top, #fff, #f1f2f2);
+    background-image: -moz-linear-gradient(top, #fff, #f1f2f2);
+    background-image: linear-gradient(top, #fff, #f1f2f2);
+    background-image: -o-linear-gradient(top, #fff, #f1f2f2);
+}
+
+.splitter ul li a {
+    padding: 5px 8px 6px;
+    color: #666;
+    text-decoration: none;
+}
+
+.splitter ul li.selected a {
+    color: #fff;
+    background-color: #666;
+}
+
+
+.service-grid {
+    width: 960px;
+}
+
+.service-grid li {
+    float: left;
+}
+
+.service-grid li services span img {
+    display: block;
+}
+
+.tool_block {
+    display: block;
+    width: 225px;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    background-color: #f6f6f6;
+
+    padding: 4px;
+    margin-right: 3px;
+}
+
+.descriptionBlock {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: lighter;
+}
+
+.download {
+    margin-top: 5px;
+}
+
+.support_links {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.download-button {
+    background-color: transparent;
+    color: #414241;
+    /*border: 1px solid #ccc;*/
+    font-size: 1.6em;
+    padding: 4px 6px;
+    margin-left: 2px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.download-button:hover {
+    background-color: #414241;
+    color: white;
+}
+
+.button-small {
+    font-size: 1em;
+}
+
+
+.small-text {
+    color: #666;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
 .isatools-header-content {
     width: 100%;
     padding-top: 38px;
@@ -100,7 +221,7 @@ Project page css
 
 */
 .project .project-title {
-    
+
     font-size: 1.5em;
 }
 
@@ -120,7 +241,7 @@ Project page css
 }
 
 .project .section-title {
-    
+
     color: #414241;
 }
 
@@ -166,7 +287,6 @@ Project page css
     margin: 10px 0;
 
     padding-top: 10px;
-    
 
     text-align: left;
     color: #414241;
@@ -176,7 +296,7 @@ Project page css
 }
 
 .latest-isatools-posts h3 a, .upcoming-isatools-events h3 a {
-    
+
     font-size: .6em;
 
 }
@@ -195,7 +315,6 @@ Project page css
 
 .display-posts-listing .title {
 
-    
     background: #414241;
     font-size: 1.3em;
     color: #fff;
@@ -232,7 +351,7 @@ Project page css
     font-size: 1em;
     width: 30%;
     margin-right: 1%;
-    
+
     float: left;
 }
 
@@ -244,7 +363,7 @@ Project page css
 }
 
 .event-name-header {
-    
+
     font-size: 1.2em;
     margin-top: -80px;
     text-transform: uppercase;
@@ -256,7 +375,7 @@ Project page css
 
 .event-item .event-name a {
     font-size: 1.2em;
-    
+
     text-decoration: none;
 }
 
@@ -298,14 +417,14 @@ Project page css
 }
 
 .event-item-label {
-    
+
     padding-bottom: 10px;
 }
 
 /*People page*/
 
 .isatools-person {
-    
+
     color: #414241;
     float: left;
     width: 219px;
@@ -363,10 +482,9 @@ Project page css
     color: #414241;
 }
 
-
 .isatools-person .meta .contact {
     text-align: right;
-    
+
     font-size: .8em;
 }
 
@@ -388,7 +506,7 @@ Project page css
 /*detail*/
 .isatools-person-detail {
     margin-top: 30px;
-    
+
 }
 
 .person-detail-image {
@@ -420,7 +538,7 @@ Project page css
 
     font-size: .9em;
     padding-top: 20px;
-    
+
 }
 
 .contact-details td {
@@ -447,17 +565,17 @@ Project page css
     margin-top: 5px;
     color: #414241;
     font-size: 1.2em;
-    
+
 }
 
 .isatools-person-detail .person-meta .email {
     margin-top: 10px;
-    
+
     color: #414241;
 }
 
 .isatools-header-content .department {
-    
+
     margin-top: 5px;
     font-size: .8em;
 
@@ -470,7 +588,7 @@ Project page css
     margin-left: 1%;
     float: left;
     font-size: 1.2em;
-    
+
     line-height: 1.3em;
 }
 
@@ -480,7 +598,7 @@ Project page css
 
 .isatools-person-detail .person-page-link {
     text-decoration: none;
-    
+
     font-size: .6em;
     float: right;
     margin-top: 3px;
@@ -522,11 +640,10 @@ Project page css
     font-size: .7em;
 }
 
-
 .blog-post .title {
 
     padding-top: 10px;
-    
+
     font-size: 1.3em;
     opacity: .9;
     font-weight: bolder;
@@ -536,7 +653,7 @@ Project page css
 .blog-post .excerpt {
 
     margin-top: 10px;
-    
+
     font-size: .9em;
 }
 
@@ -547,7 +664,6 @@ Project page css
     padding: 6px 6px;
     color: #414241;
 
-    
     font-size: 1.1em;
     opacity: 1;
 }
@@ -556,7 +672,6 @@ Project page css
 
     text-decoration: none;
 }
-
 
 /*Footer content*/
 
@@ -595,7 +710,7 @@ Project page css
 
 #footer h3,
 #footer h3 a {
-    
+
     font-size: 14px;
     font-weight: bolder;
     color: #414241;
@@ -721,19 +836,19 @@ Project page css
 .filter-item-content {
     padding-top: 1.2em;
     padding-bottom: .98em;
-    
+
     color: #414241;
 }
 
 .filter-item-content:hover {
     opacity: 1;
-    
+
     cursor: pointer;
 }
 
 .filter-item-content.active {
     color: #fff;
-    
+
 }
 
 .filter-left span {
@@ -767,27 +882,27 @@ Project page css
 
 .name-input::-webkit-input-placeholder {
     color: #f1f2f1;
-    
+
     text-transform: lowercase;
 }
 
 .name-input:-moz-placeholder {
     /* Firefox 18- */
     color: #f1f2f1;
-    
+
     text-transform: uppercase;
 }
 
 .name-input::-moz-placeholder {
     /* Firefox 19+ */
     color: #f1f2f1;
-    
+
     text-transform: uppercase;
 }
 
 .name-input:-ms-input-placeholder {
     color: #f1f2f1;
-    
+
     text-transform: uppercase;
 }
 
@@ -815,7 +930,7 @@ Project page css
     margin-left: 2px;
     margin-right: 2px;
     font-size: .8em;
-    
+
     text-decoration: none;
 }
 
@@ -827,7 +942,7 @@ Project page css
     margin-left: 2px;
     margin-right: 2px;
     font-size: .8em;
-    
+
     text-decoration: none;
 }
 
@@ -1788,8 +1903,6 @@ Person page classes
     background-color: #f6f6f6;
 }
 
-
-
 .menu-toggle:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, article.post-password-required input[type=submit]:hover {
     color: #414241;
     width: 94.3%;
@@ -1807,8 +1920,6 @@ Person page classes
 
 /*twitter*/
 
-
-
 .tweet-container #twitter_icon {
     width: 5%;
     padding-left: 11px;
@@ -1818,7 +1929,7 @@ Person page classes
 div#twitter {
     padding: 7px;
     font-size: 1.1em;
-    
+
     float: left;
     width: 92%;
 
@@ -2005,14 +2116,14 @@ div.css-search div.em-search-main .em-search-submit:hover {
 }
 
 .network-item .web-link a {
-    
+
     font-size: 1em;
     text-align: center;
 
 }
 
 .network-item h4 {
-    
+
     font-size: 1.3em;
     text-align: center;
     margin: 0;
@@ -2082,7 +2193,7 @@ div.css-search div.em-search-main .em-search-submit:hover {
         padding: 10px;
         background-color: aliceblue;
         font-size: 1em;
-        
+
         margin-top: 0;
     }
 
@@ -2170,7 +2281,7 @@ div.css-search div.em-search-main .em-search-submit:hover {
         padding: 10px;
         background-color: aliceblue;
         font-size: 1em;
-        
+
         margin-top: 0;
     }
 
@@ -2324,7 +2435,7 @@ div.css-search div.em-search-main .em-search-submit:hover {
 
 .wp_rss_retriever a {
     color: #21759b;
-    
+
 }
 
 .wp_rss_retriever ul {

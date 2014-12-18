@@ -18,26 +18,25 @@ $args = array(
 $the_query = new WP_Query( $args ); ?>
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 
-<div class="blog-post">
-<a href="<?php the_permalink() ?>">
-<?php
+    <div class="blog-post">
+        <a href="<?php the_permalink() ?>">
+        <?php
 
-$values= wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
-$thumb = '';
-if(count($values) > 0) {
-   $thumb = $values['0'];
-}
-?>
+            $values= wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'single-post-thumbnail' );
+            $thumb = '';
+            if(count($values) > 0) {
+                $thumb = $values['0'];
+            }
+        ?>
 
-<div class="picture_and_title" style="background: url(<?php echo $thumb; ?>) no-repeat; background-size: 100%;">
-</div>
-<div class="blog-post-item-content">
-    <div class="date"><?php the_date(); ?></div>
-        <div class="title"><?php the_title(); ?></div>
-
+        <div class="picture_and_title" style="background: url(<?php echo $thumb; ?>) no-repeat; background-size: 100%;">
+        </div>
+        <div class="blog-post-item-content">
+            <div class="date"><?php the_date(); ?></div>
+            <div class="title"><?php the_title(); ?></div>
+        </div>
+        </a>
     </div>
-</a>
-</div>
 
 <?php endwhile;?>
 
@@ -45,11 +44,7 @@ if(count($values) > 0) {
 </div>
 
 
-</div>
 
-<div class="cf"></div>
-<br/>
-</div>
 
 
 		</div><!-- #content -->
