@@ -73,6 +73,7 @@
 
 .service-grid li {
     float: left;
+    margin: 0;
 }
 
 .service-grid li services span img {
