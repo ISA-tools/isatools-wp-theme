@@ -13,13 +13,14 @@ get_header(); ?>
 <div>
 <br/>
 <p style="font-weight: normal; color: #666; font-size:1.2em; line-height: 26px; text-rendering: optimizelegibility;">
-        The <strong>open source ISA metadata tracking tools </strong>help to manage an increasingly diverse set of life science, environmental
+        The open source <strong>ISA framework</strong> and tools help to manage an increasingly diverse set of life science, environmental
         and biomedical experiments that employing one or a combination of technologies.<br/><br/>
 
-        Built around the ‘<strong>I</strong>nvestigation’ (the project context), ‘<strong>S</strong>tudy’ (a unit of research) and ‘<strong>A</strong>ssay’ (analytical measurement)
-        general-purpose <strong>Tab</strong>ular format, the ISA tools helps you to provide rich description of the experimental metadata (i.e. sample
-        characteristics, technology and measurement types, sample-to-data relationships)
-        so that the resulting data and discoveries are reproducible and reusable.</p>
+        Built around the '<strong>I</strong>nvestigation' (the project context), '<strong>S</strong>tudy' (a unit of research) and '<strong>A</strong>ssay' (analytical measurement)
+        data model and serializations (tabular, JSON and RDF), the ISA framework helps you to
+        provide rich description of the experimental metadata (i.e. sample characteristics, technology and measurement
+        types, sample-to-data relationships) so that the resulting data and discoveries are reproducible and
+        reusable.</p>
 </div>
 <br/>
 <div style="margin-top: 30px">
@@ -31,7 +32,7 @@ get_header(); ?>
         </div>
 
         <div class="feature-content">
-            <h2>collect and curate, following standards</h2>
+            <h2>Collect and curate, following standards</h2>
 
             <p>Describe the experimental steps using community-defined minimum reporting requirements and ontologies,
                 where
@@ -45,10 +46,10 @@ get_header(); ?>
             <img src="/wp-content/themes/isatools-wp-theme/img/features/store-search.png" alt="store"/>
         </div>
         <div class="feature-content">
-            <h2>store and browse, locally or publicly</h2>
+            <h2>Store and browse, locally or publicly</h2>
 
-            <p>create your own repository to search and browse the experimental description and associated data making
-                it close or open.</p>
+            <p>Create your own repository to search and browse the experimental description and associated data, hosted 
+            openly or privately.</p>
         </div>
     </div>
 
@@ -59,11 +60,10 @@ get_header(); ?>
         </div>
 
         <div class="feature-content">
-            <h2>submit to public repositories</h2>
+            <h2>Submit to public repositories</h2>
 
-            <p>when required, reformat the experiments for submission to supported public repositories or directly
-                export to
-                those already using ISA-Tab.</p>
+            <p>When required, reformat experiments for submission to supported public repositories or directly
+                export to those already using ISA formats.</p>
         </div>
     </div>
 
@@ -74,10 +74,10 @@ get_header(); ?>
             <img src="/wp-content/themes/isatools-wp-theme/img/features/analyse.png"/>
         </div>
         <div class="feature-content">
-            <h2>analyse with existing tools</h2>
+            <h2>Analyse with existing tools</h2>
 
-            <p>upload experimental description and associated data to a growing number of well-known analysis systems,
-                ISA connects with.</p>
+            <p>Upload experimental descriptions and associated data to a growing number of well-known analysis systems that
+                ISA formats connect with.</p>
         </div>
     </div>
 
@@ -87,9 +87,9 @@ get_header(); ?>
             <img src="/wp-content/themes/isatools-wp-theme/img/features/rdf.png"/>
         </div>
         <div class="feature-content">
-            <h2>release, reason and nanopublish</h2>
+            <h2>Release, reason and nanopublish</h2>
 
-            <p>explore how to reason over your experiments, open them to the linked data universe, or publish
+            <p>Explore and reason over your experiments, open them to the linked data universe, or publish
                 nano-statements of your discoveries.</p>
         </div>
     </div>
@@ -102,10 +102,10 @@ get_header(); ?>
         </div>
 
         <div class="feature-content">
-            <h2>publish data along your article</h2>
+            <h2>Publish data alongside your article</h2>
 
-            <p>directly export your experiments to the new generation of data journals, accepting submission in
-                ISA-Tab.</p>
+            <p>Directly export your experiments to a new generation of data journals that are accepting submissions in
+                ISA formats.</p>
         </div>
     </div>
 
@@ -118,7 +118,7 @@ get_header(); ?>
 
 <h2 style="font-size:1.6em; font-weight: lighter; color: #aaa; text-align: center; margin-top: 20px">Latest ISA News</h2>
 <br/>
-
+<!--
  <div class="tweet-container" >
     <div id="twitter_icon" class="pull-left" style="padding-top: 15px; font-size: 1.5em">
         <i class="fa fa-twitter"></i>
@@ -134,6 +134,7 @@ get_header(); ?>
 <div class="cf"></div>
 </div>
 <div class="cf"></div>
+-->
 <br/>
 
 <?php
@@ -176,9 +177,11 @@ if(count($values) > 0) {
 	</div><!-- #primary -->
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!--
 <script src="/wp-content/themes/isatools-wp-theme/assets/js/jquery.twitter.min.js"></script>
 
 <script type="text/javascript">
     twitterFetcher.fetch('361827374599389184', 'twitter', 1, true, false, false);
 </script>
+-->
 <?php get_footer(); ?>

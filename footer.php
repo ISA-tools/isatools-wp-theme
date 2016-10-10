@@ -19,8 +19,8 @@
     <div id="footer_nav_wrapper">
 
         <div class="col col_wide">
-             
-<img src="/wp-content/themes/isatools-wp-theme/img/footer_logo.svg" alt="Logo" style="width: 40%"/>
+			<img src="/wp-content/themes/isatools-wp-theme/img/footer_logo.svg" alt="ISA-Tools Logo" style="width: 30%; vertical-align: middle; padding-right: 30px;"/>
+			<a href="http://www.elixir-uk.org/"><img src="/wp-content/uploads/2016/09/elixir-uk_transparent.png" alt="ELIXIR-UK Logo" style="width: 30%; vertical-align: middle"/></a>
         </div>
 
         <div class="col col_med">

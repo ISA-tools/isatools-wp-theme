@@ -637,7 +637,6 @@ function tools_function($attrs) {
         	$str .= '<div align="center" id="'.get_the_title().'" class="services">';
         	$str .= '<img src="'.get_post_meta( get_the_ID(),'tool_info_logo', true ).'" alt="'.get_the_title().'" style="float:none"><div class="cf"></div>';
         	$str .= '<div class="descriptionBlock">'.get_post_meta( get_the_ID(),'tool_info_description', true ).'</div>';
-        	$str .= '<div><i class="fa fa-tag"></i> Version '.get_post_meta( get_the_ID(),'tool_info_version', true ).'</div><div class="cf"></div>';
 
         	$str .= '<div class="download">';
         	foreach ($supported_os as $key => $val) {

@@ -27,7 +27,7 @@
 }
 
 body {
-    margin: 0;
+    line-height: auto !important;
 }
 /**
 
@@ -43,7 +43,6 @@ ISA-Tab Viewer CSS
 }
 
 .isa-view {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
     color: #35495E;
     font-size: 12px;
     width: 100%;

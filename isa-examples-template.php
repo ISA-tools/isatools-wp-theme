@@ -79,11 +79,12 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
 <script id="study-list-template" type="text/x-handlebars-template">
 
-    {{#each studies}}
-    <li id="list-{{this}}" onclick="ISATabViewer.rendering.render_study('{{this}}')">
-        {{this}}
-    </li>
-    {{/each}}
+ {{#each studies}}
+        <li id="list-{{this.hash}}" onclick="ISATabViewer.rendering.render_study('{{this.id}}', '{{this.hash}}')">
+        {{this.id}}
+        </li>
+        {{/each}}
+        </dd>
 
 </script>
 
@@ -137,16 +138,17 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
     <br/>
 
     <div id="samples">
-        <div class="section-header">Samples</div>
+        <span class="section-header">Samples</span>
 
-        <div class="clearfix"></div>
-
-        <br/><br/>
-
-        <span class="button-green" style="width:auto;"
-              onclick="ISATabViewer.rendering.render_assay('{{study_id}}','{{study_file}}')"> View Samples</span>
+        <div class="cf"></div>
 
         <br/><br/>
+
+        <span class="btn btn-green" style="width:auto;"
+              onclick="ISATabViewer.rendering.render_assay('{{study_id}}','{{study_id_hash}}','{{study_file}}')">
+            View Samples</span>
+
+        <br/>
 
         <div id="sample-distribution">
             <ul id="sample_stats">
@@ -168,10 +170,10 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
     </div>
 
     <div id="assays">
-        <div class="section-header">Assays</div>
+        <span class="section-header">Assays</span>
         <ul>
             {{#each assays}}
-            <li class="assay-item">
+            <li>
                 <div class="assay-icon {{icon}}"></div>
                 <p class="measurement-type">{{[Study Assay Measurement Type]}}</p>
 
@@ -181,10 +183,9 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
                 <p class="assay-file-name">{{[Study Assay File Name]}}</p>
 
-                <br/>
-                        <span class="button-green" style="width:auto;"
-                              onclick="ISATabViewer.rendering.render_assay('{{../study_id}}','{{[Study Assay File Name]}}')">
-                            View Assay </span>
+                <p class="btn btn-green"
+                   onclick="ISATabViewer.rendering.render_assay('{{../study_id}}','{{../study_id_hash}}','{{[Study Assay File Name]}}')">
+                    View</p>
             </li>
             {{/each}}
         </ul>
@@ -194,7 +195,7 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
     <div id="publications">
 
-        <div class="section-header">Publications</div>
+        <span class="section-header">Publications</span>
         <ul>
             {{#each publications}}
             <li>
@@ -202,9 +203,9 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
                 <p class="publication-authors">{{[Study Publication Author List]}}</p>
 
-                <p class="publication-pubmedid">Pubmed ID <span style="color:#24AE5F">{{[Study PubMed ID]}}</span></p>
+                <p class="publication-pubmedid">Pubmed ID <span style="color:#26B99A">{{[Study PubMed ID]}}</span></p>
 
-                <p class="publication-doi">DOI <span style="color:#24AE5F">{{[Study Publication DOI]}}</span></p>
+                <p class="publication-doi">DOI <span style="color:#26B99A">{{[Study Publication DOI]}}</span></p>
             </li>
             {{/each}}
         </ul>
@@ -215,7 +216,7 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
     <div id="contacts">
 
-        <div class="section-header">Contacts</div>
+        <span class="section-header">Contacts</span>
         <ul>
             {{#each contacts}}
             <li>
@@ -231,7 +232,7 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
 
     <div id="factors">
 
-        <div class="section-header">Factors</div>
+        <span class="section-header">Factors</span>
         <ul>
             {{#each factors}}
             <li>
@@ -242,7 +243,7 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
     </div>
 
     <div id="protocols">
-        <div class="section-header">Protocols</div>
+        <span class="section-header">Protocols</span>
         <ul>
             {{#each protocols}}
             <li>
@@ -253,7 +254,6 @@ These files are shown using the <a href="https://github.com/ISA-tools/ISATab-Vie
     </div>
 
 </script>
-
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
